@@ -1,7 +1,7 @@
 
-INSERT INTO roles (name) VALUES
-('ADMIN'),
-('USER')
+INSERT INTO roles (name, active) VALUES
+('ADMIN', true),
+('USER', true)
 ON CONFLICT (name) DO NOTHING;
 
 INSERT INTO role_permissions (role_id, permission_id)
